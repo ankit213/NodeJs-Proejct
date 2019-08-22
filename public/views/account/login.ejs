@@ -1,0 +1,47 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="../../css/style.css">
+<title>Sign in</title>
+</head>
+<body class="custom_body">
+<div class="row">
+<div class="card login-page">
+<article class="card-body">
+	<h4 class="card-title login-title text-center mb-4 mt-1">Sign in</h4>
+	<hr>
+	<% if (unauthorized != "") { %>
+		<p class="text-error text-center"><%= unauthorized %></p>
+	<% } %>
+	<form action="/account" method="POST">
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+		<input name="username" class="form-control" placeholder="Pf Number" type="text">
+	</div> <!-- input-group.// -->
+	</div> <!-- form-group// -->
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 </div>
+	    <input name="password" class="form-control" placeholder="Pasword" type="password">
+	</div> <!-- input-group.// -->
+	</div> <!-- form-group// -->
+	<div class="form-group">
+	<button type="submit" class="btn btn-primary btn-block">Login</button>
+	</div> <!-- form-group// -->
+	<p class="text-center"><a href="#" class="btn_anchor">Forgot password?</a></p>
+	</form>
+</article>
+</div>
+</div>
+</body>
+</html>

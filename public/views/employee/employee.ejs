@@ -1,0 +1,24 @@
+<% layout('../layout') -%>
+<h3>Employee List</h3>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Emp Pf Number</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Extension Number</th>
+        <th scope="col">Is President Office</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(var i=0; i < records.length; i++) { %>
+            <tr>
+                <td><%= records[i].EmpPFNumber %></td>
+                <td><%= records[i].FullName %></td>
+                <td><%= records[i].ExtensionNumber %></td>
+                <td><%= records[i].IsPresidentOffice %></td>
+            </tr>
+        <% } %>
+    </tbody>
+  </table>
+    
